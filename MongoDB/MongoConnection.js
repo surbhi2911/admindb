@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const MongoDB = async () => {
   await mongoose
     .connect(
-      "mongodb+srv://vaishalitankonly4loginsites:v1a2i3s4h5a6l7i8@blooddata.vpp2o.mongodb.net/SolarDb"
+      "mongodb+srv://surbhipansuriya772:nfaqgq0qu2dbEtmp@solardb.3lyp9.mongodb.net/solarDB"
     )
     .then(() => console.log("Connected!"));
 };
