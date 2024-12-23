@@ -17,6 +17,7 @@ const postSchema = new mongoose.Schema({
     description: { type: String, required: true },
     date: { type: String, required: true },
     imageUrl: { type: String, required: true },
+    blogUrl: { type: String, required: true },
 });
 
 const User = mongoose.model('Post', postSchema);

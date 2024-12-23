@@ -15,12 +15,13 @@ MongoDB();
  */
 app.post('/api/data', async (req, res) => {
     try {
-        const { title, description, date, imageUrl } = req.body;
+        const { title, description, date, imageUrl, blogUrl } = req.body;
         const newPost = new User({
             title,
             description,
             date,
             imageUrl,
+            blogUrl
         });
 
         await newPost.save(); // Save to MongoDB
@@ -31,9 +32,9 @@ app.post('/api/data', async (req, res) => {
     }
 });
 
-/**
+/*
  * GET: Retrieve all posts
- */
+*/
 app.get('/', async (req, res) => {
     try {
         const posts = await User.find(); // Fetch all posts
